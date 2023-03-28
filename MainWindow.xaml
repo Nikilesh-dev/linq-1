@@ -1,0 +1,164 @@
+﻿<Window x:Class="linq_basic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:linq_basic"
+        mc:Ignorable="d"
+      
+    Title="Window2" Height="{x:Static SystemParameters.PrimaryScreenHeight}" Width="{x:Static SystemParameters.PrimaryScreenWidth}">
+
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="SemiBold"></Setter>
+            <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+            <Setter Property="TextBlock.FontFamily" Value="Lucida Sans"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+            <Setter Property="TextBlock.Width" Value="350"></Setter>
+            <Setter Property="TextBlock.Height" Value="30"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+            <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+            <Setter Property="TextBlock.FontFamily" Value="Lucida Sans"></Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="TextBlock.FontSize" Value="17"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\nikilesh\Downloads\images.jpg" ></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid   Width="550" Height="800" >
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="REGISTRATION FORM" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Foreground="White"  Grid.ColumnSpan="2" Margin="0,30,0,0" >
+                <Label.Style>
+                    <Style>
+                        <Setter Property="TextBlock.FontSize" Value="30"></Setter>
+                        <Setter Property="TextBlock.FontWeight" Value="SemiBold"></Setter>
+                        <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+                        <Setter Property="TextBlock.FontFamily" Value="Lucida Sans"></Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <StackPanel Grid.Row="1"  Grid.Column="0" Margin="94,30,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2"   >
+                <Label Content="NAME" Margin="0,0,0,0"  ></Label>
+                <TextBox x:Name="txtname" Text="{Binding bname}"  Background="White" Width="350" Padding="5,0,0,0" RenderTransformOrigin="1.133,0.502">
+
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2"  Grid.Column="0" Margin="94,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                <Label Content="Age" Margin="0,0,0,0" HorizontalAlignment="Left" ></Label>
+
+                <TextBox x:Name="txtAge"  Padding="5,0,0,0"></TextBox>
+
+            </StackPanel>
+            <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"  Margin="94,10,0,0">
+                <Label Content="ID" ></Label>
+                <TextBox x:Name="txtid"   HorizontalAlignment="Left"  Padding="5,0,0,0" ></TextBox>
+
+            </StackPanel>
+            <StackPanel Grid.Row="4"  Grid.Column="0" Margin="94,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                <Label Content="E-MAIL" ></Label>
+
+                <TextBox x:Name="txtMail"   Padding="5,0,0,0"></TextBox>
+
+            </StackPanel>
+            <StackPanel Grid.Row="5"  Grid.Column="0" Margin="94,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                <Label Content="PH.NUMBER" Margin="0,0,0,0" HorizontalAlignment="Left" ></Label>
+
+                <TextBox x:Name="txtnum"   Padding="5,0,0,0"></TextBox>
+            </StackPanel>
+           
+            <StackPanel Grid.Row="6"  Grid.Column="0" Margin="94,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                <Label Content="STATE" Margin="0,0,0,0" HorizontalAlignment="Left"></Label>
+                <TextBox x:Name="txtstate"  Padding="5,0,0,0"></TextBox>
+            </StackPanel>
+
+            <Button Content="SUBMIT"  Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,40,0,0"  Background="#3adc90" Width="130" Height="30"  Foreground="White" Click="Button_Click_1"  ></Button>
+           
+
+ </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Content="DETAILS" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,60,0,0">
+                <Label.Style>
+                    <Style>
+                        <Setter Property="TextBlock.FontSize" Value="30"></Setter>
+                        <Setter Property="TextBlock.FontWeight" Value="SemiBold"></Setter>
+                        <Setter Property="TextBlock.Foreground" Value="White"></Setter>
+                        <Setter Property="TextBlock.FontFamily" Value="Lucida Sans"></Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <StackPanel Grid.Row="1"   Margin="0,60,0,0">
+                <TextBox x:Name="txtsreach"  VerticalContentAlignment="Center"></TextBox>
+                <Button Content="SEARCH"   Margin="0,30,0,0"  Background="#3adc90" Width="130" Height="30"  Foreground="White" Click="Button_Click" ></Button>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Margin="50,50,0,0" Grid.ColumnSpan="2">
+                <Label Content="Information" ></Label>
+                <ListView Margin="0,10,0,0"  Width="580" HorizontalAlignment="Left" Height="120" x:Name="listview" SelectionChanged="listview_SelectionChanged"  >
+                    <ListView.View>
+                        <GridView >
+                            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="70" ></GridViewColumn>
+                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Ename}"  Width="110" ></GridViewColumn>
+                            <GridViewColumn Header="Age" DisplayMemberBinding="{Binding EAge}"  Width="50" ></GridViewColumn>
+                            <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Eemail}"  Width="140" ></GridViewColumn>
+                            <GridViewColumn Header="Phone No" DisplayMemberBinding="{Binding Ephone}"  Width="110" ></GridViewColumn>
+                            <GridViewColumn Header="State" DisplayMemberBinding="{Binding Estate}"  Width="100" ></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                    <ListView.Style>
+                        <Style>
+                            <Setter Property="TextBlock.Background" Value="#fafafa"></Setter>
+                            <Setter Property="TextBlock.FontSize" Value="15"></Setter>
+                            <Setter Property="TextBlock.FontWeight" Value="Medium"></Setter>
+                        </Style>
+                    </ListView.Style>
+
+
+                </ListView>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Window>
